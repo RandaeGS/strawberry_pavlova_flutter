@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const reviewInfo = Row(
+const reviewStars = Row(
   children: [
     Icon(Icons.star, color: Colors.green,),
     Icon(Icons.star, color: Colors.green,),
@@ -10,24 +10,43 @@ const reviewInfo = Row(
   ],
 );
 
+final reviewInfo = Container(
+  margin: const EdgeInsets.only(left: 20),
+  child: const Row(
+    children: [
+      Text(
+        "170 Reviews",
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w800,
+          fontFamily: 'Roboto',
+          letterSpacing: 0.5,
+          fontSize: 20,
+        ),
+      ),
+    ],
+  ),
+);
+
 class InfoColumn extends StatelessWidget {
 
   const InfoColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Text("hola"),
-        Text("Hola"),
+        const Text("hola"),
+        const Text("Hola"),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            reviewStars,
             reviewInfo,
-
           ],
         ),
-        Row(
+        const Row(
           children: [
 
           ],
