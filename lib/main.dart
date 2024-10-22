@@ -21,12 +21,23 @@ class MyApp extends StatelessWidget {
         body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const InfoColumn(),
-            
-            Column(
-              children: [
-                Image.asset('images/pavlova.jpg', fit: BoxFit.cover,)
-              ],
+
+            const Expanded(
+              child: InfoColumn(),
+            ),
+
+            Expanded(
+              flex: 2,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Image.asset(
+                      'images/pavlova.jpg',
+                      fit: BoxFit.cover, // Esto asegura que la imagen se escale
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),
