@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'info_column.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,16 +19,18 @@ class MyApp extends StatelessWidget {
         ),
 
         body: const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Placeholder()
+                InfoColumn(),
               ],
 
             ),
             Column(
               children: [
-                Placeholder()
+
               ],
 
             )
