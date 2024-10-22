@@ -21,13 +21,8 @@ class MyApp extends StatelessWidget {
         body: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                InfoColumn(),
-              ],
+            InfoColumn(),
 
-            ),
             Column(
               children: [
 
