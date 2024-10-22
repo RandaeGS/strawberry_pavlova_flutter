@@ -18,10 +18,16 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.pink,
         ),
 
-        body: const Row(
+        body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            InfoColumn(),
+            const InfoColumn(),
+            
+            Column(
+              children: [
+                Image.asset('images/pavlova.jpg', fit: BoxFit.cover,)
+              ],
+            )
           ],
         ),
       ),
