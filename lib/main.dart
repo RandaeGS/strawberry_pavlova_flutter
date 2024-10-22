@@ -22,13 +22,6 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             InfoColumn(),
-
-            Column(
-              children: [
-
-              ],
-
-            )
           ],
         ),
       ),
