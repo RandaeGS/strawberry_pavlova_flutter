@@ -9,7 +9,32 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Asignacion Strawberry Pavlova"),
+          backgroundColor: Colors.pink,
+        ),
+
+        body: const Row(
+          children: [
+            Column(
+              children: [
+                Placeholder()
+              ],
+
+            ),
+            Column(
+              children: [
+                Placeholder()
+              ],
+
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
 
