@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Asignacion Strawberry Pavlova"),
           backgroundColor: Colors.pink,
+          centerTitle: true,
         ),
 
         body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
 
             const Expanded(
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
                   Expanded(
                     child: Image.asset(
                       'images/pavlova.jpg',
-                      fit: BoxFit.cover, // Esto asegura que la imagen se escale
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ],

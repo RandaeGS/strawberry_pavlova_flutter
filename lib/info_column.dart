@@ -39,34 +39,32 @@ const descTextStyle = TextStyle(
 
 final iconList = DefaultTextStyle.merge(
   style: descTextStyle,
-  child: Container(
-    padding: const EdgeInsets.all(20),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Column(
-          children: [
-            Icon(Icons.kitchen, color: Colors.green[500]),
-            const Text('PREP:'),
-            const Text('25 min'),
-          ],
-        ),
-        Column(
-          children: [
-            Icon(Icons.timer, color: Colors.green[500]),
-            const Text('COOK:'),
-            const Text('1 hr'),
-          ],
-        ),
-        Column(
-          children: [
-            Icon(Icons.restaurant, color: Colors.green[500]),
-            const Text('FEEDS:'),
-            const Text('4-6'),
-          ],
-        ),
-      ],
-    ),
+  child: Row(
+    children: [
+      Column(
+        children: [
+          Icon(Icons.kitchen, color: Colors.green[500]),
+          const Text('PREP:'),
+          const Text('25 min'),
+        ],
+      ),
+      const SizedBox(width: 30,),
+      Column(
+        children: [
+          Icon(Icons.timer, color: Colors.green[500]),
+          const Text('COOK:'),
+          const Text('1 hr'),
+        ],
+      ),
+      const SizedBox(width: 30,),
+      Column(
+        children: [
+          Icon(Icons.restaurant, color: Colors.green[500]),
+          const Text('FEEDS:'),
+          const Text('4-6'),
+        ],
+      ),
+    ],
   ),
 );
 
@@ -80,7 +78,7 @@ class InfoColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
           "Strawberry Pavlova",
@@ -93,6 +91,7 @@ class InfoColumn extends StatelessWidget {
           ),
         ),
 
+        const SizedBox(height: 10,),
         const SizedBox(
           width: 250,
           child: Text(
@@ -106,14 +105,17 @@ class InfoColumn extends StatelessWidget {
           ),
         ),
 
+        const SizedBox(height: 20,),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             reviewStars,
             reviewInfo,
           ],
         ),
+        const SizedBox(height: 20,),
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             iconList,
           ],
